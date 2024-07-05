@@ -26,7 +26,6 @@ export default function checkToken(req, res, next) {
         // HTTP 403, authorisiert, aber Zugriff verboten
         return res.sendStatus(403);
       }
-      // Such den User in der DB
       req.user = user;
       next();
     });
